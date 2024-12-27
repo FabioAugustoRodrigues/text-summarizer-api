@@ -1,0 +1,10 @@
+name: text-summarizer-api
+
+services:
+  python:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.Python
+    restart: unless-stopped
+    ports:
+      - 8400:8000
